@@ -1,0 +1,25 @@
+name: Daily Swing Scan
+on:
+  schedule:
+    - cron: '30 11 * * 1-5' # 5:00 PM IST, Mon–Fri
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install yfinance pandas numpy requests
+      - run: python3 scanner.py
+      - name: Commit today's report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          rm -f data_cache_*.pkl scan.log
+          git add -A
+          git commit -m "📡 scan $(date +%F)" || echo "no changes"
+          git push
