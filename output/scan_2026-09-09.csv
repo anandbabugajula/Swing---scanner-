@@ -1,0 +1,16 @@
+Symbol,Company,Industry,Setup,Close,Entry,Stop,Target,Risk_pct,RR,RS_3m,ATR_pct,Vol_x,Turnover_cr,TopSector,Score
+NYKAA,FSN E-Commerce Ventures Ltd.,Consumer Services,A: Base near trigger,343.0,349.55,325.08,410.72,7.0,2.5,30.6,2.2,0.9,147.0,Yes,100.0
+BOSCHLTD,Bosch Ltd.,Automobile and Auto Components,A: Base near trigger,49100.0,50000.0,46500.0,58750.0,7.0,2.5,25.4,2.3,0.7,193.0,Yes,97.0
+ETERNAL,Eternal Ltd.,Consumer Services,A: Base near trigger,320.6,332.95,315.8,375.83,5.2,2.5,35.1,2.3,0.6,1216.0,Yes,94.0
+LAURUSLABS,Laurus Labs Ltd.,Healthcare,A: Base near trigger,1937.0,1955.0,1818.15,2297.12,7.0,2.5,38.1,2.5,0.5,667.0,-,94.0
+PAYTM,One 97 Communications Ltd.,Financial Services,A: Fresh breakout,1751.5,1751.5,1628.9,2058.01,7.0,2.5,70.0,3.3,2.1,659.0,-,87.0
+OIL,Oil India Ltd.,Oil Gas & Consumable Fuels,A: Base near trigger,498.95,504.9,469.56,593.26,7.0,2.5,18.5,2.5,1.1,106.0,-,81.0
+CONCOR,Container Corporation of India Ltd.,Services,A: Base near trigger,510.0,524.4,493.05,602.78,6.0,2.5,12.5,2.4,0.7,74.0,Yes,80.0
+AUROPHARMA,Aurobindo Pharma Ltd.,Healthcare,A: Base near trigger,1698.9,1717.0,1598.8,2012.5,6.9,2.5,14.9,2.3,0.7,140.0,-,79.0
+BHEL,Bharat Heavy Electricals Ltd.,Capital Goods,A: Base near trigger,433.7,442.65,411.66,520.11,7.0,2.5,13.7,2.8,1.1,325.0,-,74.0
+POLICYBZR,PB Fintech Ltd.,Financial Services,A: Base near trigger,1800.0,1875.0,1743.75,2203.12,7.0,2.5,18.5,2.7,1.1,200.0,-,72.0
+HAL,Hindustan Aeronautics Ltd.,Capital Goods,A: Base near trigger,5000.5,5099.3,4742.35,5991.68,7.0,2.5,18.9,2.2,1.6,530.0,-,69.0
+GRASIM,Grasim Industries Ltd.,Construction Materials,A: Base near trigger,3300.0,3371.0,3222.1,3743.25,4.4,2.5,6.0,2.0,0.7,396.0,-,57.0
+CGPOWER,CG Power and Industrial Solutions Ltd.,Capital Goods,A: Base near trigger,926.95,930.55,865.41,1093.4,7.0,2.5,0.2,2.4,1.4,216.0,-,57.0
+ABB,ABB India Ltd.,Capital Goods,A: Base near trigger,7401.5,7699.0,7258.0,8801.5,5.7,2.5,10.3,2.3,1.8,128.0,-,54.0
+SAIL,Steel Authority of India Ltd.,Metals & Mining,B: Pullback to MA,186.4,189.78,184.43,200.96,2.8,2.09,0.1,3.6,0.5,491.0,-,36.0
