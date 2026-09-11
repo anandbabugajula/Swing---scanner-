@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 """
 Nifty 200 Swing Trade Scanner (cash market, no F&O)
@@ -5,10 +6,11 @@ Nifty 200 Swing Trade Scanner (cash market, no F&O)
 5-step funnel: market -> sector -> stock -> setup -> trade plan
 
 Run:  python3 scanner.py            (after market close, Mon-Fri)
+      python3 scanner.py --force    (override weekend/holiday skip)
 Deps: pandas, numpy, yfinance, requests
 """
 
-import os, sys, json, time, datetime as dt
+import os, sys, json, time, argparse, datetime as dt
 import numpy as np
 import pandas as pd
 import requests
@@ -18,12 +20,13 @@ OUT_DIR    = os.path.join(BASE_DIR, "output")
 CONS_CSV   = os.path.join(BASE_DIR, "nifty200_constituents.csv")
 CONS_URL   = "https://www.niftyindices.com/IndexConstituent/ind_nifty200list.csv"
 EARN_CACHE = os.path.join(BASE_DIR, "earnings_cache.json")
-POSITIONS  = os.path.join(BASE_DIR, "positions.csv")   # NEW: optional
+HOLIDAY_CSV = os.path.join(BASE_DIR, "nse_holidays.csv")
+POSITIONS  = os.path.join(BASE_DIR, "positions.csv")
 
 # ----------------------------- tunable parameters -----------------------------
 P = dict(
     history_days      = 400,
-    min_turnover_cr   = 100,     # FIX: was 30 — thin names are risky
+    min_turnover_cr   = 100,      # FIX: was 30 — thin names are risky
     atr_pct_min       = 2.0,
     atr_pct_max       = 6.0,
     max_dist_52w_high = 0.20,
@@ -36,17 +39,35 @@ P = dict(
     pb_depth_max      = 0.12,
     pb_ma_tol         = 0.03,
     min_risk_pct      = 0.025,
-    max_risk_pct      = 0.10,    # NEW: reject bases wider than 10%
+    max_risk_pct      = 0.10,     # NEW: reject bases wider than 10%
     min_rr            = 2.0,
-    min_rs_3m         = 5.0,     # NEW: must beat Nifty by >=5% over 3m
-    earnings_blackout_days = 7,  # NEW: skip if results within N days
+    min_rs_3m         = 5.0,      # NEW: must beat Nifty by >=5% over 3m
+    earnings_blackout_days = 7,   # NEW: skip if results within N days
 
-    # NEW: position sizing (edit for your account)
-    capital           = 100_000, # INR
-    risk_per_trade_pct = 0.5,    # % of capital risked per trade
+    # NEW: position sizing — EDIT THESE for your account
+    capital            = 100_000, # INR
+    risk_per_trade_pct = 0.5,     # % of capital risked per trade
 )
 
 os.makedirs(OUT_DIR, exist_ok=True)
+
+# --------------------------- trading holiday check ---------------------------
+def is_trading_holiday(today=None):
+    """Return (skip: bool, reason: str). Skips weekends and NSE holidays."""
+    today = today or dt.date.today()
+    if today.weekday() >= 5:                       # Sat=5, Sun=6
+        return True, "Weekend"
+    if not os.path.exists(HOLIDAY_CSV):
+        return False, None
+    try:
+        hol = pd.read_csv(HOLIDAY_CSV)
+        hol["Date"] = pd.to_datetime(hol["Date"]).dt.date
+        match = hol[hol["Date"] == today]
+        if not match.empty:
+            return True, str(match["Holiday"].iloc[0])
+    except Exception as e:
+        print(f"[warn] holiday check failed: {e}")
+    return False, None
 
 # ------------------------------- data loading --------------------------------
 def load_constituents() -> pd.DataFrame:
@@ -91,7 +112,7 @@ def download(tickers, period="400d") -> dict:
               f"{', '.join(x.replace('.NS','') for x in failed[:8])}...")
     return out
 
-# --------------------------- NEW: earnings cache -----------------------------
+# --------------------------- earnings cache ----------------------------------
 def load_earnings_cache() -> dict:
     if os.path.exists(EARN_CACHE):
         try:
@@ -145,13 +166,13 @@ def add_indicators(df: pd.DataFrame) -> pd.DataFrame:
         df[f"SMA{n}"] = c.rolling(n).mean()
     pc = c.shift(1)
     tr = pd.concat([(h - l), (h - pc).abs(), (l - pc).abs()], axis=1).max(axis=1)
-    df["ATR"]   = tr.ewm(alpha=1/14, adjust=False).mean()
-    df["ATRp"]  = df["ATR"] / c * 100
-    df["V20"]   = v.rolling(20).mean()
+    df["ATR"]    = tr.ewm(alpha=1/14, adjust=False).mean()
+    df["ATRp"]   = df["ATR"] / c * 100
+    df["V20"]    = v.rolling(20).mean()
     df["TURNcr"] = (c * v).rolling(20).mean() / 1e7
-    df["RET63"] = c.pct_change(63) * 100
-    df["RET21"] = c.pct_change(21) * 100
-    df["H52"]   = h.rolling(252, min_periods=200).max()
+    df["RET63"]  = c.pct_change(63) * 100
+    df["RET21"]  = c.pct_change(21) * 100
+    df["H52"]    = h.rolling(252, min_periods=200).max()
     return df
 
 # ------------------------------- setups ---------------------------------------
@@ -169,7 +190,7 @@ def analyze(sym, name, ind, df, nifty_ret63, top_sectors):
     # ---- base filters ----
     if not (close > sma50 > sma200):
         return None
-    if rs63 <= P["min_rs_3m"]:                                  # FIX: was rs63 <= 0
+    if rs63 <= P["min_rs_3m"]:
         return None
     if pd.isna(h52) or close < (1 - P["max_dist_52w_high"]) * h52:
         return None
@@ -179,15 +200,14 @@ def analyze(sym, name, ind, df, nifty_ret63, top_sectors):
         return None
 
     lb = P["base_lookback"]
-    win = df.iloc[-lb-1:-1]                                     # FIX: exclude today
+    win = df.iloc[-lb-1:-1]                       # FIX: exclude today's bar
     base_hi, base_lo = win["High"].max(), win["Low"].min()
     base_height = base_hi - base_lo
     tight = (base_hi / base_lo - 1) <= P["base_tightness"]
     near_trig = close >= base_hi * (1 - P["trig_proximity"])
 
     v_ratio  = x["Volume"] / x["V20"] if x["V20"] else 0
-    prior_hi = base_hi                                          # same as before, clearer
-    fresh_break = (close > prior_hi) and v_ratio >= P["breakout_vol_mult"]
+    fresh_break = (close > base_hi) and v_ratio >= P["breakout_vol_mult"]
     vol_dryup = df["Volume"].iloc[-5:].mean() < x["V20"]
 
     hi60      = df["High"].iloc[-P["pb_window"]:].max()
@@ -207,12 +227,12 @@ def analyze(sym, name, ind, df, nifty_ret63, top_sectors):
     if fresh_break:
         setup = "A: Fresh breakout"
         entry = round(close, 2)
-        stop  = round(base_lo, 2)                               # FIX: was max(base_lo, entry*0.93)
+        stop  = round(base_lo, 2)                 # FIX: real support
         fresh_break_flag = True
     elif tight and near_trig:
         setup = "A: Base near trigger"
         entry = round(base_hi, 2)
-        stop  = round(base_lo, 2)                               # FIX: was max(base_lo, entry*0.93)
+        stop  = round(base_lo, 2)                 # FIX: real support
 
     # ---- Setup B: pullback (real chart target) ----
     if setup is None:
@@ -231,21 +251,18 @@ def analyze(sym, name, ind, df, nifty_ret63, top_sectors):
     risk_pct = (entry - stop) / entry * 100
     if risk_pct < P["min_risk_pct"] * 100:
         return None
-    if risk_pct > P["max_risk_pct"] * 100:                      # NEW
+    if risk_pct > P["max_risk_pct"] * 100:        # NEW
         return None
 
-    # ---- target ----
+    # ---- target: base-scaled projection ----
     if target is None:
-        # FIX: base-scaled projection, not risk-scaled
-        # near-trigger: entry=base_hi, stop=base_lo, so risk=base_height
-        # target = entry + 2.5 * base_height gives R:R = 2.5 by design of the base
-        target = round(entry + 2.5 * base_height, 2)
+        target = round(entry + 2.5 * base_height, 2)   # FIX: base-scaled
 
     rr = (target - entry) / (entry - stop)
     if rr < P["min_rr"]:
         return None
 
-    # ---- composite score (0-100) ----
+    # ---- composite score ----
     score = 15 + min(max(rs63, 0), 30) / 30 * 30
 
     if setup.startswith("A"):
@@ -273,9 +290,8 @@ def analyze(sym, name, ind, df, nifty_ret63, top_sectors):
                 TopSector="Yes" if in_top_sector else "-",
                 Score=round(min(score, 100), 0))
 
-# --------------------------- NEW: positions check ----------------------------
+# --------------------------- positions check --------------------------------
 def check_positions(frames) -> list:
-    """Read positions.csv if present, return list of alert strings."""
     if not os.path.exists(POSITIONS):
         return []
     alerts = []
@@ -296,6 +312,16 @@ def check_positions(frames) -> list:
 
 # ------------------------------- main -----------------------------------------
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--force", action="store_true",
+                    help="Run even on weekends/holidays")
+    args = ap.parse_args()
+
+    skip, reason = is_trading_holiday()
+    if skip and not args.force:
+        print(f"Market closed today: {reason}. Exiting (use --force to override).")
+        return
+
     cons = load_constituents()
     tickers = cons["YF"].tolist()
     cache = os.path.join(BASE_DIR, f"data_cache_{dt.date.today().isoformat()}.pkl")
@@ -324,7 +350,6 @@ def main():
                 if mkt_green else
                 "CAUTION: Nifty trend filter NOT green - cut size / skip new longs")
 
-    # sector strength
     ind_ret = {}
     for t, d in frames.items():
         r = d.iloc[-1]["RET63"]
@@ -333,7 +358,7 @@ def main():
     ind_table = (pd.DataFrame([(k, np.median(v), len(v)) for k, v in ind_ret.items()],
                               columns=["Industry", "MedianRet63", "N"])
                    .sort_values("MedianRet63", ascending=False))
-    top_sectors = set(ind_table.head(5)["Industry"])            # FIX: no global
+    top_sectors = set(ind_table.head(5)["Industry"])
 
     nifty_ret63 = n_last["RET63"]
     rows = []
@@ -351,16 +376,16 @@ def main():
     out = pd.DataFrame(rows).sort_values("Score", ascending=False) if rows \
           else pd.DataFrame(columns=["Symbol"])
 
-    # NEW: earnings blackout filter — only hits API for survivors
+    # earnings blackout filter
     if len(out):
         print(f"Checking earnings dates for {len(out)} survivors...")
         earn_cache = load_earnings_cache()
-        today = dt.date.today()
+        today_d = dt.date.today()
         keep = []
         for _, r in out.iterrows():
             yf_sym = r["Symbol"] + ".NS"
             ed = next_earnings_date(yf_sym, earn_cache)
-            if ed and 0 <= (ed - today).days <= P["earnings_blackout_days"]:
+            if ed and 0 <= (ed - today_d).days <= P["earnings_blackout_days"]:
                 print(f"  [skip] {r['Symbol']}: earnings on {ed}")
                 continue
             keep.append(r)
@@ -369,7 +394,7 @@ def main():
             out = out.sort_values("Score", ascending=False).reset_index(drop=True)
         save_earnings_cache(earn_cache)
 
-    # NEW: score delta vs yesterday (read BEFORE overwriting latest_scan.csv)
+    # score delta vs yesterday
     latest_path = os.path.join(OUT_DIR, "latest_scan.csv")
     if os.path.exists(latest_path) and len(out):
         try:
@@ -384,13 +409,13 @@ def main():
     if len(out):
         out["ScoreDelta"] = (out["Score"] - out["PrevScore"]).round(0).astype(int)
 
-    # NEW: position sizing columns
+    # position sizing
     if len(out):
         risk_per_share = out["Entry"] - out["Stop"]
         risk_amount    = P["capital"] * P["risk_per_trade_pct"] / 100
-        out["Qty"]          = (risk_amount / risk_per_share).apply(
+        out["Qty"] = (risk_amount / risk_per_share).apply(
             lambda q: int(q) if q >= 1 else 0)
-        out["CapitalUsed"]  = (out["Qty"] * out["Entry"]).round(0)
+        out["CapitalUsed"] = (out["Qty"] * out["Entry"]).round(0)
 
     today = dt.date.today().isoformat()
     out.to_csv(os.path.join(OUT_DIR, f"scan_{today}.csv"), index=False)
@@ -400,7 +425,7 @@ def main():
     write_report(out, ind_table, n_last, mkt_note, mkt_green, breadth, today)
     write_markdown(out, ind_table, mkt_note, today, breadth, len(frames))
 
-    # NEW: run log
+    # run log
     log_path = os.path.join(OUT_DIR, "run_log.csv")
     log_row = pd.DataFrame([{
         "date": today,
@@ -413,11 +438,10 @@ def main():
     log_row.to_csv(log_path, mode="a",
                    header=not os.path.exists(log_path), index=False)
 
-    # NEW: positions check
     alerts = check_positions(frames)
 
     print(f"\n{mkt_note}\nBreadth: {breadth:.0f}% of Nifty 200 above 50-DMA")
-    print(f"Qualified setups: {len(out)}  ->  output/report.html")
+    print(f"Qualified setups: {len(out)}  ->  output/report_{today}.html")
     if alerts:
         print("\nPosition alerts:")
         for a in alerts:
@@ -452,8 +476,12 @@ def write_markdown(out, ind_table, mkt_note, today, breadth, n_scanned):
               f"_Position sizing assumes ₹{P['capital']:,} capital at "
               f"{P['risk_per_trade_pct']}% risk per trade. Set alerts at Entry; "
               "buy only on volume; verify results dates. Educational tool, not advice._"]
+    body = "\n".join(lines)
+    # NEW: dated archive + latest
+    with open(os.path.join(OUT_DIR, f"report_{today}.md"), "w") as f:
+        f.write(body)
     with open(os.path.join(OUT_DIR, "report.md"), "w") as f:
-        f.write("\n".join(lines))
+        f.write(body)
 
 def write_report(out, ind_table, n_last, mkt_note, mkt_green, breadth, today):
     badge = "g" if mkt_green else "r"
@@ -539,6 +567,9 @@ Check upcoming results dates before entering. Never average down past the stop.<
 <i>Educational tool. Not SEBI-registered investment advice. Verify prices before trading.</i></div>
 </body></html>"""
 
+    # NEW: dated archive + latest
+    with open(os.path.join(OUT_DIR, f"report_{today}.html"), "w") as f:
+        f.write(html)
     with open(os.path.join(OUT_DIR, "report.html"), "w") as f:
         f.write(html)
 
