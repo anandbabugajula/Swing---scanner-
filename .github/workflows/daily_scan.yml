@@ -1,25 +1,60 @@
-name: Daily Swing Scan
+name: Swing Scan
+
 on:
   schedule:
-    - cron: '30 11 * * 1-5' # 5:00 PM IST, Mon–Fri
-  workflow_dispatch:
+    # 5:00 PM IST = 11:30 UTC. Runs Mon-Fri (UTC).
+    # Script also skips NSE holidays via nse_holidays.csv.
+    - cron: '30 11 * * 1-5'
+  workflow_dispatch:        # manual trigger from the Actions tab
+
 permissions:
-  contents: write
+  contents: write           # needed to commit results back
+
 jobs:
   scan:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout repo
+        uses: actions/checkout@v4
         with:
-          python-version: '3.12'
-      - run: pip install yfinance pandas numpy requests
-      - run: python3 scanner.py
-      - name: Commit today's report
+          fetch-depth: 1
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          rm -f data_cache_*.pkl scan.log
-          git add -A
-          git commit -m "📡 scan $(date +%F)" || echo "no changes"
+          python -m pip install --upgrade pip
+          pip install pandas numpy yfinance requests
+
+      - name: Run scanner
+        run: python scanner.py
+
+      - name: Prune reports older than 90 days
+        run: |
+          find output -name 'report_*.html' -mtime +90 -delete 2>/dev/null || true
+          find output -name 'report_*.md'   -mtime +90 -delete 2>/dev/null || true
+          find output -name 'scan_*.csv'    -mtime +90 -delete 2>/dev/null || true
+
+      - name: Commit and push results
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add output/scan_*.csv output/report_*.html output/report_*.md \
+                  output/report.html output/report.md output/latest_scan.csv \
+                  output/sector_strength.csv output/run_log.csv \
+                  earnings_cache.json 2>/dev/null || true
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit (likely holiday or weekend)."
+            exit 0
+          fi
+
+          git commit -m "Swing scan $(date -u +'%Y-%m-%d')"
           git push
