@@ -1,35 +1,32 @@
-# 📡 Swing Scan — 2026-09-10
+# 📡 Swing Scan — 2026-09-11
 
 **Market filter:** CAUTION: Nifty trend filter NOT green - cut size / skip new longs  
-**Breadth:** 31% of 196 stocks above 50-DMA
+**Breadth:** 27% of 196 stocks above 50-DMA
 
 ## 🎯 Candidates (score-ranked)
 
-| Stock | Setup | Entry | Stop | Target | R:R | Risk% | RS 3m | Score |
-|---|---|---|---|---|---|---|---|---|
-| **LAURUSLABS** | A: Base near trigger | 1,955.0 | 1,818.2 | 2,297.1 | 1:2.5 | 7.0% | +40.1% | 100 |
-| **ETERNAL** | A: Base near trigger | 332.9 | 315.8 | 375.8 | 1:2.5 | 5.2% | +32.7% | 96 |
-| **BOSCHLTD** | A: Base near trigger | 50,000.0 | 46,500.0 | 58,750.0 | 1:2.5 | 7.0% | +26.3% | 95 |
-| **NYKAA** | A: Base near trigger | 349.6 | 325.4 | 409.9 | 1:2.5 | 6.9% | +25.6% | 95 |
-| **PAYTM** | A: Base near trigger | 1,758.9 | 1,635.8 | 2,066.7 | 1:2.5 | 7.0% | +62.5% | 93 |
-| **AUROPHARMA** | A: Base near trigger | 1,717.0 | 1,598.8 | 2,012.5 | 1:2.5 | 6.9% | +13.9% | 81 |
-| **APLAPOLLO** | A: Base near trigger | 2,272.2 | 2,113.2 | 2,669.9 | 1:2.5 | 7.0% | +20.8% | 76 |
-| **OFSS** | B: Pullback to MA | 11,837.6 | 11,492.2 | 12,540.0 | 1:2.03 | 2.9% | +25.7% | 74 |
-| **MCX** | A: Base near trigger | 3,400.0 | 3,162.0 | 3,995.0 | 1:2.5 | 7.0% | +14.9% | 71 |
-| **BHEL** | A: Base near trigger | 442.6 | 411.7 | 520.1 | 1:2.5 | 7.0% | +13.2% | 70 |
-| **POLICYBZR** | A: Base near trigger | 1,875.0 | 1,757.0 | 2,170.0 | 1:2.5 | 6.3% | +16.9% | 70 |
-| **HAL** | A: Base near trigger | 5,097.4 | 4,740.6 | 5,989.4 | 1:2.5 | 7.0% | +18.9% | 66 |
-| **CHOLAFIN** | A: Base near trigger | 1,925.0 | 1,790.2 | 2,261.9 | 1:2.5 | 7.0% | +19.2% | 64 |
-| **CONCOR** | A: Base near trigger | 524.2 | 493.1 | 602.2 | 1:2.5 | 6.0% | +10.7% | 64 |
-| **RADICO** | B: Pullback to MA | 4,494.0 | 4,368.1 | 4,747.0 | 1:2.01 | 2.8% | +25.1% | 64 |
+| Stock | Setup | Entry | Stop | Target | R:R | Risk% | RS 3m | ΔScore | Qty | Score |
+|---|---|---|---|---|---|---|---|---|---|---|
+| **ETERNAL** | A: Base near trigger | 332.9 | 315.8 | 375.8 | 1:2.5 | 5.2% | +30.3% | -8 | 29 | 88 |
+| **NYKAA** | A: Base near trigger | 349.6 | 325.4 | 409.9 | 1:2.5 | 6.9% | +28.2% | -11 | 20 | 84 |
+| **LAURUSLABS** | A: Base near trigger | 1,955.0 | 1,790.0 | 2,367.5 | 1:2.5 | 8.4% | +43.7% | -20 | 3 | 80 |
+| **BOSCHLTD** | A: Base near trigger | 50,000.0 | 46,410.0 | 58,975.0 | 1:2.5 | 7.2% | +26.6% | -16 | 0 | 79 |
+| **AUROPHARMA** | A: Base near trigger | 1,717.0 | 1,598.8 | 2,012.5 | 1:2.5 | 6.9% | +21.2% | -6 | 4 | 75 |
+| **TORNTPHARM** | A: Base near trigger | 5,066.0 | 4,823.0 | 5,673.5 | 1:2.5 | 4.8% | +13.1% | 0 | 2 | 74 |
+| **TVSMOTOR** | B: Pullback to MA | 4,160.2 | 4,042.5 | 4,484.5 | 1:2.76 | 2.8% | +22.0% | 0 | 4 | 73 |
+| **MOTHERSON** | A: Base near trigger | 170.7 | 159.9 | 197.6 | 1:2.5 | 6.3% | +13.5% | 0 | 46 | 73 |
+| **BHEL** | A: Base near trigger | 442.6 | 408.1 | 528.9 | 1:2.5 | 7.8% | +14.5% | -12 | 14 | 58 |
+| **MCX** | A: Base near trigger | 3,400.0 | 3,124.3 | 4,089.1 | 1:2.5 | 8.1% | +15.7% | -14 | 1 | 57 |
+| **HAL** | A: Base near trigger | 5,097.4 | 4,707.0 | 6,073.4 | 1:2.5 | 7.7% | +16.6% | -16 | 1 | 50 |
+| **MOTILALOFS** | A: Base near trigger | 1,060.2 | 968.5 | 1,289.3 | 1:2.5 | 8.6% | +10.6% | 0 | 5 | 49 |
 
 ## 🏭 Top industries (median 3-mo return)
 
-- Realty: **+7.0%**
-- Automobile and Auto Components: **+6.5%**
-- Consumer Services: **+6.3%**
-- Information Technology: **+6.3%**
-- Healthcare: **+2.8%**
+- Consumer Services: **+5.5%**
+- Information Technology: **+3.6%**
+- Automobile and Auto Components: **+2.7%**
+- Realty: **+1.8%**
+- Healthcare: **+1.7%**
 
 ---
-_Set alerts at Entry for 'Base near trigger' rows; verify results dates before entering; risk max 1–2% of capital per trade. Educational tool, not advice._
+_Position sizing assumes ₹100,000 capital at 0.5% risk per trade. Set alerts at Entry; buy only on volume; verify results dates. Educational tool, not advice._

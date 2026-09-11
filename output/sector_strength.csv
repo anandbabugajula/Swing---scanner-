@@ -1,19 +1,19 @@
 Industry,MedianRet63,N
-Realty,6.981313153935275,6
-Automobile and Auto Components,6.504531551858561,14
-Consumer Services,6.346203514824067,10
-Information Technology,6.290223290610208,12
-Healthcare,2.793498347023471,16
-Consumer Durables,2.2991435470672617,8
-Services,1.2596857353526225,4
-Financial Services,0.9980661391789769,46
-Metals & Mining,-0.5250810783412163,10
-Capital Goods,-1.6080848588373442,22
-Oil Gas & Consumable Fuels,-2.4468789292240833,9
-Chemicals,-3.463565006648711,6
-Telecommunication,-3.46426037590522,4
-Construction Materials,-5.023081867902141,4
-Power,-5.452226240771724,8
-Textiles,-8.285813553035847,1
-Construction,-8.367299240158532,2
-Fast Moving Consumer Goods,-9.733322103836457,14
+Consumer Services,5.53783674677425,10
+Information Technology,3.576860893349898,12
+Automobile and Auto Components,2.6841117089714595,14
+Realty,1.770308662935327,6
+Healthcare,1.7424003843940383,16
+Financial Services,1.503147432022578,46
+Consumer Durables,0.7268489270741363,8
+Services,-0.16500505789259767,4
+Telecommunication,-1.0799593537356378,4
+Metals & Mining,-1.8195121243121892,10
+Capital Goods,-4.270015913048108,22
+Construction Materials,-4.744331155425235,4
+Oil Gas & Consumable Fuels,-5.365747005428312,9
+Power,-6.072122125076413,8
+Chemicals,-6.121749313570895,6
+Textiles,-8.97157965997264,1
+Construction,-10.179789172407554,2
+Fast Moving Consumer Goods,-11.637078177093557,14
