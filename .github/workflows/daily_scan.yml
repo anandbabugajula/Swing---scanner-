@@ -26,11 +26,12 @@ jobs:
         with:
           python-version: '3.11'
           cache: 'pip'
+          cache-dependency-path: requirements.txt
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pandas numpy yfinance requests
+          pip install -r requirements.txt
 
       - name: Run scanner
         run: python scanner.py
