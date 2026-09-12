@@ -574,4 +574,16 @@ Check upcoming results dates before entering. Never average down past the stop.<
         f.write(html)
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception:
+        import traceback
+        err = traceback.format_exc()
+        try:
+            with open(os.path.join(OUT_DIR, "error_log.txt"), "a") as f:
+                f.write(f"\n--- {dt.datetime.now().isoformat()} ---\n{err}\n")
+        except Exception:
+            pass
+        print("\n[FATAL] Scan crashed before finishing — report NOT written.")
+        print(err)
+        sys.exit(1)
