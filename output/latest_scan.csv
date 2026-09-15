@@ -1,4 +1,4 @@
 Symbol,Company,Industry,Setup,Close,Entry,Stop,Target,Risk_pct,RR,RS_3m,ATR_pct,Vol_x,Turnover_cr,TopSector,Score,PrevScore,ScoreDelta,Qty,CapitalUsed
 NYKAA,FSN E-Commerce Ventures Ltd.,Consumer Services,A: Base near trigger,336.2,349.55,328.0,403.42,6.2,2.5,27.2,2.3,0.6,141.0,Yes,82.0,82.0,0,23,8040.0
-AUROPHARMA,Aurobindo Pharma Ltd.,Healthcare,A: Base near trigger,1660.0,1717.0,1598.8,2012.5,6.9,2.5,22.5,2.4,0.5,133.0,Yes,76.0,74.0,2,4,6868.0
-LAURUSLABS,Laurus Labs Ltd.,Healthcare,A: Base near trigger,1926.9,1981.8,1790.0,2461.3,9.7,2.5,43.6,2.6,0.4,678.0,Yes,76.0,75.0,1,2,3964.0
+AUROPHARMA,Aurobindo Pharma Ltd.,Healthcare,A: Base near trigger,1660.0,1717.0,1598.8,2012.5,6.9,2.5,22.5,2.4,0.5,133.0,Yes,76.0,76.0,0,4,6868.0
+LAURUSLABS,Laurus Labs Ltd.,Healthcare,A: Base near trigger,1926.9,1981.8,1790.0,2461.3,9.7,2.5,43.6,2.6,0.4,678.0,Yes,76.0,76.0,0,2,3964.0
