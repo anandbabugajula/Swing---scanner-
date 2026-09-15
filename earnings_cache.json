@@ -46,5 +46,9 @@
   "MOTILALOFS.NS": {
     "checked": "2026-09-11",
     "next": null
+  },
+  "RADICO.NS": {
+    "checked": "2026-09-15",
+    "next": "2026-10-28"
   }
 }
