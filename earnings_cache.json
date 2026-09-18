@@ -1,6 +1,6 @@
 {
   "ETERNAL.NS": {
-    "checked": "2026-09-11",
+    "checked": "2026-09-18",
     "next": "2026-10-15"
   },
   "NYKAA.NS": {
@@ -8,7 +8,7 @@
     "next": "2026-11-05"
   },
   "LAURUSLABS.NS": {
-    "checked": "2026-09-11",
+    "checked": "2026-09-18",
     "next": "2026-10-22"
   },
   "BOSCHLTD.NS": {
@@ -16,7 +16,7 @@
     "next": "2026-11-20"
   },
   "AUROPHARMA.NS": {
-    "checked": "2026-09-11",
+    "checked": "2026-09-18",
     "next": "2026-11-05"
   },
   "TORNTPHARM.NS": {
@@ -32,7 +32,7 @@
     "next": "2026-11-12"
   },
   "BHEL.NS": {
-    "checked": "2026-09-11",
+    "checked": "2026-09-18",
     "next": "2026-10-15"
   },
   "MCX.NS": {
@@ -62,5 +62,21 @@
   "PERSISTENT.NS": {
     "checked": "2026-09-17",
     "next": "2026-10-15"
+  },
+  "ABCAPITAL.NS": {
+    "checked": "2026-09-18",
+    "next": "2026-10-29"
+  },
+  "GLENMARK.NS": {
+    "checked": "2026-09-18",
+    "next": "2026-10-30"
+  },
+  "LTF.NS": {
+    "checked": "2026-09-18",
+    "next": "2026-10-14"
+  },
+  "ZYDUSLIFE.NS": {
+    "checked": "2026-09-18",
+    "next": "2026-11-05"
   }
 }
