@@ -4,7 +4,7 @@
     "next": "2026-10-15"
   },
   "NYKAA.NS": {
-    "checked": "2026-09-11",
+    "checked": "2026-09-21",
     "next": "2026-11-05"
   },
   "LAURUSLABS.NS": {
@@ -20,7 +20,7 @@
     "next": "2026-11-05"
   },
   "TORNTPHARM.NS": {
-    "checked": "2026-09-11",
+    "checked": "2026-09-21",
     "next": "2026-11-06"
   },
   "TVSMOTOR.NS": {
@@ -78,5 +78,17 @@
   "ZYDUSLIFE.NS": {
     "checked": "2026-09-18",
     "next": "2026-11-05"
+  },
+  "INDHOTEL.NS": {
+    "checked": "2026-09-21",
+    "next": "2026-11-04"
+  },
+  "OIL.NS": {
+    "checked": "2026-09-21",
+    "next": "2026-11-12"
+  },
+  "LICHSGFIN.NS": {
+    "checked": "2026-09-21",
+    "next": "2026-10-28"
   }
 }
