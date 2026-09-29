@@ -8,7 +8,7 @@
     "next": "2026-11-05"
   },
   "LAURUSLABS.NS": {
-    "checked": "2026-09-18",
+    "checked": "2026-09-29",
     "next": "2026-10-22"
   },
   "BOSCHLTD.NS": {
@@ -68,7 +68,7 @@
     "next": "2026-10-29"
   },
   "GLENMARK.NS": {
-    "checked": "2026-09-18",
+    "checked": "2026-09-29",
     "next": "2026-10-30"
   },
   "LTF.NS": {
@@ -90,5 +90,9 @@
   "LICHSGFIN.NS": {
     "checked": "2026-09-28",
     "next": "2026-10-28"
+  },
+  "PAYTM.NS": {
+    "checked": "2026-09-29",
+    "next": "2026-11-03"
   }
 }
