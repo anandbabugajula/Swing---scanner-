@@ -1,4 +1,4 @@
-# 📡 Swing Scan — 2026-10-02
+# 📡 Swing Scan — 2026-10-05
 
 **Market filter:** CAUTION: Nifty trend filter NOT green - cut size / skip new longs  
 **Breadth:** 10% of 197 stocks above 50-DMA
