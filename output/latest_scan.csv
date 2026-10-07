@@ -1,9 +1,7 @@
 Symbol,Company,Industry,Setup,Close,Entry,Stop,Target,Risk_pct,RR,RS_3m,ATR_pct,Vol_x,Turnover_cr,TopSector,Score,PrevScore,ScoreDelta,Qty,CapitalUsed
-COFORGE,Coforge Ltd.,Information Technology,A: Base near trigger,1849.7,1893.6,1717.0,2335.1,9.3,2.5,32.9,3.1,0.8,452.0,Yes,79.0,83.0,-4,2,3787.0
-DIVISLAB,Divi's Laboratories Ltd.,Healthcare,A: Base near trigger,9550.0,9740.0,8923.0,11782.5,8.4,2.5,47.4,2.0,1.0,422.0,-,73.0,73.0,0,0,0.0
-LAURUSLABS,Laurus Labs Ltd.,Healthcare,A: Base near trigger,2050.0,2055.3,1863.5,2534.8,9.3,2.5,42.6,2.3,1.4,312.0,-,73.0,80.0,-7,2,4111.0
-ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,Services,A: Base near trigger,1783.4,1824.0,1707.0,2116.5,6.4,2.5,5.7,2.3,0.8,354.0,Yes,62.0,62.0,0,4,7296.0
-KOTAKBANK,Kotak Mahindra Bank Ltd.,Financial Services,A: Base near trigger,431.9,435.6,394.7,537.85,9.4,2.5,23.6,2.2,2.2,767.0,-,57.0,59.0,-2,12,5227.0
-INDHOTEL,Indian Hotels Co. Ltd.,Consumer Services,A: Base near trigger,736.0,755.0,704.6,881.0,6.7,2.5,8.5,2.1,0.8,228.0,Yes,54.0,54.0,0,9,6795.0
-NYKAA,FSN E-Commerce Ventures Ltd.,Consumer Services,A: Base near trigger,338.2,346.15,316.0,421.52,8.7,2.5,11.0,2.6,0.8,144.0,Yes,52.0,52.0,0,16,5538.0
-CGPOWER,CG Power and Industrial Solutions Ltd.,Capital Goods,A: Base near trigger,912.0,926.1,838.55,1144.97,9.5,2.5,6.8,2.5,1.2,188.0,-,38.0,38.0,0,5,4630.0
+DIVISLAB,Divi's Laboratories Ltd.,Healthcare,A: Base near trigger,9588.0,9740.0,8923.0,11782.5,8.4,2.5,46.2,2.0,0.9,424.0,Yes,82.0,73.0,9,0,0.0
+LAURUSLABS,Laurus Labs Ltd.,Healthcare,A: Base near trigger,2052.8,2055.3,1863.5,2534.8,9.3,2.5,38.8,2.3,1.0,310.0,Yes,80.0,73.0,7,2,4111.0
+MAHABANK,Bank of Maharashtra,Financial Services,A: Base near trigger,84.15,84.88,78.87,99.9,7.1,2.5,5.2,2.8,1.6,108.0,-,54.0,54.0,0,83,7045.0
+NYKAA,FSN E-Commerce Ventures Ltd.,Consumer Services,A: Base near trigger,341.25,345.0,316.0,417.5,8.4,2.5,8.7,2.6,1.4,147.0,Yes,54.0,52.0,2,17,5865.0
+SOLARINDS,Solar Industries India Ltd.,Chemicals,A: Base near trigger,20050.0,20370.0,18480.0,25095.0,9.3,2.5,15.4,3.3,0.6,483.0,-,53.0,53.0,0,0,0.0
+INDHOTEL,Indian Hotels Co. Ltd.,Consumer Services,A: Base near trigger,731.3,755.0,704.6,881.0,6.7,2.5,5.3,2.1,1.0,236.0,Yes,52.0,54.0,-2,9,6795.0

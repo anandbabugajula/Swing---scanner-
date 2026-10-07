@@ -1,0 +1,7 @@
+Symbol,Company,Industry,Setup,Close,Entry,Stop,Target,Risk_pct,RR,RS_3m,ATR_pct,Vol_x,Turnover_cr,TopSector,Score,PrevScore,ScoreDelta,Qty,CapitalUsed
+DIVISLAB,Divi's Laboratories Ltd.,Healthcare,A: Base near trigger,9588.0,9740.0,8923.0,11782.5,8.4,2.5,46.2,2.0,0.9,424.0,Yes,82.0,73.0,9,0,0.0
+LAURUSLABS,Laurus Labs Ltd.,Healthcare,A: Base near trigger,2052.8,2055.3,1863.5,2534.8,9.3,2.5,38.8,2.3,1.0,310.0,Yes,80.0,73.0,7,2,4111.0
+MAHABANK,Bank of Maharashtra,Financial Services,A: Base near trigger,84.15,84.88,78.87,99.9,7.1,2.5,5.2,2.8,1.6,108.0,-,54.0,54.0,0,83,7045.0
+NYKAA,FSN E-Commerce Ventures Ltd.,Consumer Services,A: Base near trigger,341.25,345.0,316.0,417.5,8.4,2.5,8.7,2.6,1.4,147.0,Yes,54.0,52.0,2,17,5865.0
+SOLARINDS,Solar Industries India Ltd.,Chemicals,A: Base near trigger,20050.0,20370.0,18480.0,25095.0,9.3,2.5,15.4,3.3,0.6,483.0,-,53.0,53.0,0,0,0.0
+INDHOTEL,Indian Hotels Co. Ltd.,Consumer Services,A: Base near trigger,731.3,755.0,704.6,881.0,6.7,2.5,5.3,2.1,1.0,236.0,Yes,52.0,54.0,-2,9,6795.0
