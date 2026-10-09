@@ -16,7 +16,7 @@
     "next": "2026-11-20"
   },
   "AUROPHARMA.NS": {
-    "checked": "2026-10-02",
+    "checked": "2026-10-09",
     "next": "2026-11-05"
   },
   "TORNTPHARM.NS": {
@@ -48,7 +48,7 @@
     "next": null
   },
   "RADICO.NS": {
-    "checked": "2026-09-22",
+    "checked": "2026-10-09",
     "next": "2026-10-28"
   },
   "POLICYBZR.NS": {
@@ -96,7 +96,7 @@
     "next": "2026-11-03"
   },
   "COFORGE.NS": {
-    "checked": "2026-10-01",
+    "checked": "2026-10-09",
     "next": "2026-10-23"
   },
   "KOTAKBANK.NS": {
@@ -118,5 +118,9 @@
   "SOLARINDS.NS": {
     "checked": "2026-10-07",
     "next": "2026-11-20"
+  },
+  "PNB.NS": {
+    "checked": "2026-10-09",
+    "next": "2026-10-15"
   }
 }
