@@ -112,15 +112,27 @@
     "next": "2026-10-29"
   },
   "MAHABANK.NS": {
-    "checked": "2026-10-07",
+    "checked": "2026-10-14",
     "next": null
   },
   "SOLARINDS.NS": {
-    "checked": "2026-10-07",
+    "checked": "2026-10-14",
     "next": "2026-11-20"
   },
   "PNB.NS": {
     "checked": "2026-10-09",
     "next": "2026-10-15"
+  },
+  "APLAPOLLO.NS": {
+    "checked": "2026-10-14",
+    "next": "2026-10-29"
+  },
+  "TECHM.NS": {
+    "checked": "2026-10-14",
+    "next": "2026-10-15"
+  },
+  "DLF.NS": {
+    "checked": "2026-10-14",
+    "next": "2026-10-29"
   }
 }

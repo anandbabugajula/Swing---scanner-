@@ -1,0 +1,9 @@
+Symbol,Company,Industry,Setup,Close,Entry,Stop,Target,Risk_pct,RR,RS_3m,ATR_pct,Vol_x,Turnover_cr,TopSector,Score,PrevScore,ScoreDelta,Qty,CapitalUsed
+LAURUSLABS,Laurus Labs Ltd.,Healthcare,A: Base near trigger,2036.9,2069.2,1952.1,2361.95,5.7,2.5,37.1,2.5,0.8,329.0,-,78.0,77.0,1,4,8277.0
+APLAPOLLO,APL Apollo Tubes Ltd.,Capital Goods,A: Base near trigger,2160.0,2224.5,2026.2,2720.25,8.9,2.5,25.4,3.0,1.2,124.0,-,68.0,68.0,0,2,4449.0
+HAL,Hindustan Aeronautics Ltd.,Capital Goods,A: Base near trigger,4933.0,4879.5,4549.3,5705.0,6.8,2.5,17.9,2.3,1.1,317.0,-,65.0,59.0,6,1,4880.0
+RADICO,Radico Khaitan Ltd,Fast Moving Consumer Goods,A: Base near trigger,4554.1,4614.1,4234.8,5562.35,8.2,2.5,17.6,2.5,0.7,137.0,-,59.0,47.0,12,1,4614.0
+MAHABANK,Bank of Maharashtra,Financial Services,A: Base near trigger,83.1,84.88,78.87,99.9,7.1,2.5,9.8,2.9,1.1,111.0,-,57.0,52.0,5,83,7045.0
+NYKAA,FSN E-Commerce Ventures Ltd.,Consumer Services,A: Base near trigger,336.5,346.45,316.0,422.58,8.8,2.5,8.3,2.8,0.6,168.0,Yes,57.0,53.0,4,16,5543.0
+SOLARINDS,Solar Industries India Ltd.,Chemicals,A: Base near trigger,20170.0,20398.0,18650.0,24768.0,8.6,2.5,16.4,3.1,0.6,391.0,-,56.0,53.0,3,0,0.0
+DLF,DLF Ltd.,Realty,A: Base near trigger,666.9,683.6,634.15,807.22,7.2,2.5,8.7,2.6,0.7,230.0,-,52.0,52.0,0,10,6836.0
