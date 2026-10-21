@@ -1,0 +1,5 @@
+Symbol,Company,Industry,Setup,Close,Entry,Stop,Target,Risk_pct,RR,RS_3m,ATR_pct,Vol_x,Turnover_cr,TopSector,Score,PrevScore,ScoreDelta,Qty,CapitalUsed
+LAURUSLABS,Laurus Labs Ltd.,Healthcare,A: Base near trigger,2012.5,2089.0,1952.1,2431.25,6.6,2.5,32.0,2.6,0.9,288.0,-,76.0,76.0,0,3,6267.0
+INDHOTEL,Indian Hotels Co. Ltd.,Consumer Services,A: Base near trigger,753.0,776.15,704.6,955.03,9.2,2.5,8.6,2.4,1.2,304.0,Yes,51.0,50.0,1,6,4657.0
+UNIONBANK,Union Bank of India,Financial Services,A: Base near trigger,182.0,182.99,164.81,228.44,9.9,2.5,9.0,3.0,1.6,230.0,Yes,51.0,43.0,8,27,4941.0
+HAL,Hindustan Aeronautics Ltd.,Capital Goods,A: Base near trigger,4854.4,5012.0,4549.3,6168.75,9.2,2.5,11.9,2.3,1.0,321.0,-,43.0,47.0,-4,1,5012.0
