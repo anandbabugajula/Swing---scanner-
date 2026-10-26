@@ -1,0 +1,4 @@
+Symbol,Company,Industry,Setup,Close,Entry,Stop,Target,Risk_pct,RR,RS_3m,ATR_pct,Vol_x,Turnover_cr,TopSector,Score,PrevScore,ScoreDelta,Qty,CapitalUsed
+ETERNAL,Eternal Ltd.,Consumer Services,A: Base near trigger,325.55,332.7,301.75,410.08,9.3,2.5,20.5,3.2,1.2,885.0,Yes,62.0,62.0,0,16,5323.0
+KOTAKBANK,Kotak Mahindra Bank Ltd.,Financial Services,A: Base near trigger,440.75,453.1,413.75,551.48,8.7,2.5,18.8,2.3,1.2,1166.0,-,62.0,62.0,0,12,5437.0
+ZYDUSLIFE,Zydus Lifesciences Ltd.,Healthcare,A: Base near trigger,1160.4,1167.4,1100.3,1335.15,5.7,2.5,8.9,2.8,1.5,187.0,-,61.0,61.0,0,7,8172.0
