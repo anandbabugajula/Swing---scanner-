@@ -1,4 +1,4 @@
-# 📡 Swing Scan — 2026-10-30
+# 📡 Swing Scan — 2026-11-02
 
 **Market filter:** CAUTION: Nifty trend filter NOT green - cut size / skip new longs  
 **Breadth:** 24% of 198 stocks above 50-DMA
@@ -7,10 +7,10 @@
 
 | Stock | Setup | Entry | Stop | Target | R:R | Risk% | RS 3m | ΔScore | Qty | Score |
 |---|---|---|---|---|---|---|---|---|---|---|
-| **KOTAKBANK** | A: Base near trigger | 460.2 | 427.7 | 541.5 | 1:2.5 | 7.1% | +23.7% | -8 | 15 | 58 |
+| **KOTAKBANK** | A: Base near trigger | 460.2 | 427.7 | 541.5 | 1:2.5 | 7.1% | +23.7% | 0 | 15 | 58 |
 | **PNB** | A: Base near trigger | 125.2 | 113.7 | 154.0 | 1:2.5 | 9.2% | +15.2% | 0 | 43 | 56 |
-| **HAL** | A: Base near trigger | 5,012.0 | 4,590.0 | 6,067.0 | 1:2.5 | 8.4% | +11.4% | +12 | 1 | 54 |
-| **DLF** | A: Base near trigger | 696.0 | 634.1 | 850.6 | 1:2.5 | 8.9% | +10.8% | -1 | 8 | 53 |
+| **HAL** | A: Base near trigger | 5,012.0 | 4,590.0 | 6,067.0 | 1:2.5 | 8.4% | +11.4% | 0 | 1 | 54 |
+| **DLF** | A: Base near trigger | 696.0 | 634.1 | 850.6 | 1:2.5 | 8.9% | +10.8% | 0 | 8 | 53 |
 
 ## 🏭 Top industries (median 3-mo return)
 
