@@ -1,7 +1,7 @@
 Symbol,Company,Industry,Setup,Close,Entry,Stop,Target,Risk_pct,RR,RS_3m,ATR_pct,Vol_x,Turnover_cr,TopSector,Score,PrevScore,ScoreDelta,Qty,CapitalUsed
-PERSISTENT,Persistent Systems Ltd.,Information Technology,A: Base near trigger,6051.0,6078.0,5492.0,7543.0,9.6,2.5,12.9,3.1,1.0,470.0,Yes,63.0,63.0,0,0,0.0
-KOTAKBANK,Kotak Mahindra Bank Ltd.,Financial Services,A: Base near trigger,458.35,462.9,427.7,550.9,7.6,2.5,21.3,2.1,0.8,1102.0,-,55.0,58.0,-3,14,6481.0
-PNB,Punjab National Bank,Financial Services,A: Base near trigger,123.06,125.22,114.1,153.02,8.9,2.5,13.0,2.4,0.7,248.0,-,52.0,56.0,-4,44,5510.0
-DLF,DLF Ltd.,Realty,A: Base near trigger,701.0,699.6,634.45,862.47,9.3,2.5,10.2,2.4,1.0,167.0,-,50.0,53.0,-3,7,4897.0
-HAL,Hindustan Aeronautics Ltd.,Capital Goods,A: Base near trigger,4855.0,5012.0,4590.0,6067.0,8.4,2.5,8.6,2.4,0.9,330.0,-,50.0,54.0,-4,1,5012.0
-ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,Services,A: Base near trigger,1854.0,1872.0,1687.9,2332.25,9.8,2.5,13.2,2.7,0.4,603.0,-,38.0,38.0,0,2,3744.0
+PAYTM,One 97 Communications Ltd.,Financial Services,A: Base near trigger,1720.0,1736.7,1571.0,2150.95,9.5,2.5,25.9,3.7,0.7,663.0,-,64.0,64.0,0,3,5210.0
+KOTAKBANK,Kotak Mahindra Bank Ltd.,Financial Services,A: Base near trigger,464.65,465.95,427.7,561.58,8.2,2.5,20.8,2.1,0.7,1099.0,-,62.0,55.0,7,13,6057.0
+HAL,Hindustan Aeronautics Ltd.,Capital Goods,A: Base near trigger,4958.6,5012.0,4642.0,5937.0,7.4,2.5,9.8,2.4,1.1,338.0,-,56.0,50.0,6,1,5012.0
+DLF,DLF Ltd.,Realty,A: Fresh breakout,709.0,709.0,643.1,863.75,9.3,2.35,9.9,2.3,1.6,170.0,-,55.0,50.0,5,7,4963.0
+PNB,Punjab National Bank,Financial Services,A: Base near trigger,120.97,125.22,114.1,153.02,8.9,2.5,10.9,2.5,0.9,253.0,-,52.0,52.0,0,44,5510.0
+ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,Services,A: Base near trigger,1866.9,1872.0,1687.9,2332.25,9.8,2.5,13.6,2.6,1.1,613.0,-,43.0,38.0,5,2,3744.0
