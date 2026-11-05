@@ -1,7 +1,7 @@
 Symbol,Company,Industry,Setup,Close,Entry,Stop,Target,Risk_pct,RR,RS_3m,ATR_pct,Vol_x,Turnover_cr,TopSector,Score,PrevScore,ScoreDelta,Qty,CapitalUsed
-PAYTM,One 97 Communications Ltd.,Financial Services,A: Base near trigger,1720.0,1736.7,1571.0,2150.95,9.5,2.5,25.9,3.7,0.7,663.0,-,64.0,64.0,0,3,5210.0
-KOTAKBANK,Kotak Mahindra Bank Ltd.,Financial Services,A: Base near trigger,464.65,465.95,427.7,561.58,8.2,2.5,20.8,2.1,0.7,1099.0,-,62.0,55.0,7,13,6057.0
-HAL,Hindustan Aeronautics Ltd.,Capital Goods,A: Base near trigger,4958.6,5012.0,4642.0,5937.0,7.4,2.5,9.8,2.4,1.1,338.0,-,56.0,50.0,6,1,5012.0
-DLF,DLF Ltd.,Realty,A: Fresh breakout,709.0,709.0,643.1,863.75,9.3,2.35,9.9,2.3,1.6,170.0,-,55.0,50.0,5,7,4963.0
-PNB,Punjab National Bank,Financial Services,A: Base near trigger,120.97,125.22,114.1,153.02,8.9,2.5,10.9,2.5,0.9,253.0,-,52.0,52.0,0,44,5510.0
-ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,Services,A: Base near trigger,1866.9,1872.0,1687.9,2332.25,9.8,2.5,13.6,2.6,1.1,613.0,-,43.0,38.0,5,2,3744.0
+PAYTM,One 97 Communications Ltd.,Financial Services,A: Base near trigger,1732.4,1736.7,1571.0,2150.95,9.5,2.5,26.4,3.6,0.6,665.0,-,63.0,64.0,-1,3,5210.0
+DLF,DLF Ltd.,Realty,A: Base near trigger,720.0,710.5,646.3,871.0,9.0,2.5,14.6,2.3,1.4,170.0,Yes,58.0,55.0,3,7,4974.0
+KOTAKBANK,Kotak Mahindra Bank Ltd.,Financial Services,A: Base near trigger,459.4,465.95,427.7,561.58,8.2,2.5,18.1,2.1,0.9,1064.0,-,51.0,62.0,-11,13,6057.0
+PNB,Punjab National Bank,Financial Services,A: Base near trigger,122.42,125.22,114.1,153.02,8.9,2.5,10.1,2.5,0.9,260.0,-,51.0,52.0,-1,44,5510.0
+ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,Services,A: Base near trigger,1910.0,1875.2,1687.9,2343.45,10.0,2.5,14.6,2.6,1.2,641.0,-,45.0,43.0,2,2,3750.0
+AUROPHARMA,Aurobindo Pharma Ltd.,Healthcare,A: Base near trigger,1705.0,1706.9,1547.7,2104.9,9.3,2.5,10.2,2.4,2.4,146.0,-,44.0,44.0,0,3,5121.0
