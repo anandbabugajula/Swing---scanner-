@@ -1,7 +1,7 @@
-# 📡 Swing Scan — 2026-11-10
+# 📡 Swing Scan — 2026-11-11
 
 **Market filter:** CAUTION: Nifty trend filter NOT green - cut size / skip new longs  
-**Breadth:** 68% of 197 stocks above 50-DMA
+**Breadth:** 68% of 198 stocks above 50-DMA
 
 ## 🎯 Candidates (score-ranked)
 
@@ -16,7 +16,7 @@
 - Telecommunication: **+1.3%**
 - Consumer Services: **+1.1%**
 - Realty: **+0.5%**
-- Oil Gas & Consumable Fuels: **-0.1%**
+- Oil Gas & Consumable Fuels: **-0.7%**
 
 ---
 _Position sizing assumes ₹100,000 capital at 0.5% risk per trade. Set alerts at Entry; buy only on volume; verify results dates. Educational tool, not advice._
