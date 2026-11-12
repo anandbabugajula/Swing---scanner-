@@ -1,22 +1,21 @@
-# 📡 Swing Scan — 2026-11-11
+# 📡 Swing Scan — 2026-11-12
 
-**Market filter:** CAUTION: Nifty trend filter NOT green - cut size / skip new longs  
-**Breadth:** 68% of 198 stocks above 50-DMA
+**Market filter:** GREEN-LIGHT: Nifty above 50-DMA, 20-DMA > 50-DMA  
+**Breadth:** 72% of 198 stocks above 50-DMA
 
 ## 🎯 Candidates (score-ranked)
 
 | Stock | Setup | Entry | Stop | Target | R:R | Risk% | RS 3m | ΔScore | Qty | Score |
 |---|---|---|---|---|---|---|---|---|---|---|
-| **TECHM** | A: Base near trigger | 1,860.0 | 1,676.2 | 2,319.4 | 1:2.5 | 9.9% | +9.4% | 0 | 2 | 56 |
-| **UNIONBANK** | A: Base near trigger | 188.9 | 170.7 | 234.3 | 1:2.5 | 9.6% | +5.4% | 0 | 27 | 47 |
+| **TECHM** | A: Base near trigger | 1,860.0 | 1,733.2 | 2,177.0 | 1:2.5 | 6.8% | +7.2% | +5 | 3 | 61 |
 
 ## 🏭 Top industries (median 3-mo return)
 
+- Telecommunication: **+4.2%**
 - Information Technology: **+3.1%**
-- Telecommunication: **+1.3%**
-- Consumer Services: **+1.1%**
-- Realty: **+0.5%**
-- Oil Gas & Consumable Fuels: **-0.7%**
+- Oil Gas & Consumable Fuels: **+0.6%**
+- Services: **+0.6%**
+- Financial Services: **+0.5%**
 
 ---
 _Position sizing assumes ₹100,000 capital at 0.5% risk per trade. Set alerts at Entry; buy only on volume; verify results dates. Educational tool, not advice._

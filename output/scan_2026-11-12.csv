@@ -1,0 +1,2 @@
+Symbol,Company,Industry,Setup,Close,Entry,Stop,Target,Risk_pct,RR,RS_3m,ATR_pct,Vol_x,Turnover_cr,TopSector,Score,PrevScore,ScoreDelta,Qty,CapitalUsed
+TECHM,Tech Mahindra Ltd.,Information Technology,A: Base near trigger,1788.5,1860.0,1733.2,2177.0,6.8,2.5,7.2,2.8,0.6,740.0,Yes,61.0,56.0,5,3,5580.0
