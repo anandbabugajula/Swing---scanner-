@@ -1,0 +1,2 @@
+Symbol,Company,Industry,Setup,Close,Entry,Stop,Target,Risk_pct,RR,RS_3m,ATR_pct,Vol_x,Turnover_cr,TopSector,Score,PrevScore,ScoreDelta,Qty,CapitalUsed
+COFORGE,Coforge Ltd.,Information Technology,A: Base near trigger,2086.7,2127.9,1939.0,2600.15,8.9,2.5,7.9,3.4,3.2,598.0,-,43.0,43.0,0,2,4256.0
