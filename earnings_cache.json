@@ -60,8 +60,8 @@
     "next": "2026-11-07"
   },
   "PERSISTENT.NS": {
-    "checked": "2026-11-03",
-    "next": "2026-10-15"
+    "checked": "2026-11-24",
+    "next": "2027-01-19"
   },
   "ABCAPITAL.NS": {
     "checked": "2026-09-18",
@@ -104,7 +104,7 @@
     "next": "2027-01-23"
   },
   "ADANIPORTS.NS": {
-    "checked": "2026-11-03",
+    "checked": "2026-11-24",
     "next": "2027-01-28"
   },
   "CGPOWER.NS": {
@@ -146,5 +146,13 @@
   "HEROMOTOCO.NS": {
     "checked": "2026-10-28",
     "next": "2026-10-28"
+  },
+  "BHARTIARTL.NS": {
+    "checked": "2026-11-24",
+    "next": "2027-02-03"
+  },
+  "MANKIND.NS": {
+    "checked": "2026-11-24",
+    "next": "2027-01-26"
   }
 }

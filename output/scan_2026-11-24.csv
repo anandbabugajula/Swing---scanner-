@@ -1,0 +1,6 @@
+Symbol,Company,Industry,Setup,Close,Entry,Stop,Target,Risk_pct,RR,RS_3m,ATR_pct,Vol_x,Turnover_cr,TopSector,Score,PrevScore,ScoreDelta,Qty,CapitalUsed
+PERSISTENT,Persistent Systems Ltd.,Information Technology,A: Fresh breakout,6282.5,6282.5,5768.0,7462.5,8.2,2.29,6.1,2.8,2.1,367.0,Yes,64.0,64.0,0,0,0.0
+ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,Services,A: Base near trigger,1919.0,1979.0,1813.7,2392.25,8.4,2.5,8.5,2.3,0.7,519.0,Yes,59.0,59.0,0,3,5937.0
+BHARTIARTL,Bharti Airtel Ltd.,Telecommunication,A: Base near trigger,2128.5,2172.3,1958.0,2708.05,9.9,2.5,5.0,2.0,0.7,1799.0,Yes,52.0,52.0,0,2,4345.0
+COFORGE,Coforge Ltd.,Information Technology,A: Base near trigger,2142.3,2177.8,1972.0,2692.3,9.4,2.5,9.2,3.3,1.5,612.0,Yes,52.0,43.0,9,2,4356.0
+MANKIND,Mankind Pharma Ltd.,Healthcare,A: Base near trigger,2615.1,2705.0,2457.9,3322.75,9.1,2.5,5.0,2.5,0.2,182.0,Yes,51.0,51.0,0,2,5410.0
