@@ -1,0 +1,4 @@
+Symbol,Company,Industry,Setup,Close,Entry,Stop,Target,Risk_pct,RR,RS_3m,ATR_pct,Vol_x,Turnover_cr,TopSector,Score,PrevScore,ScoreDelta,Qty,CapitalUsed
+ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,Services,A: Base near trigger,1911.3,1979.0,1843.7,2317.25,6.8,2.5,7.4,2.3,0.5,546.0,Yes,60.0,64.0,-4,3,5937.0
+MANKIND,Mankind Pharma Ltd.,Healthcare,A: Base near trigger,2685.0,2705.0,2461.1,3314.75,9.0,2.5,6.2,2.4,0.5,140.0,Yes,54.0,54.0,0,2,5410.0
+TECHM,Tech Mahindra Ltd.,Information Technology,A: Base near trigger,1854.7,1860.0,1698.5,2263.75,8.7,2.5,11.2,2.6,1.0,399.0,Yes,53.0,58.0,-5,3,5580.0
